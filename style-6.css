@@ -1,0 +1,311 @@
+html {
+  height: 100%;
+}
+
+.preload {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.preload-poke {
+  background-image: url('pokebackground.jpg');
+}
+
+.preload-cosmo {
+  background-image: url('cosmoBG.png');
+}
+
+.preload-zomb {
+  background-image: url('zombBG.png');
+}
+
+.preload-hell {
+  background-image: url('hellBG.jpg');
+}
+
+.preload-scar {
+  background-image: url('scar.jpg');
+}
+
+body {
+  height: 100%;
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #7a6950;
+  background-color: #423526;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-bottom: 20px;
+  background-color: rgba(90, 78, 75, 0);
+  background-image: linear-gradient(0deg, rgb(0 0 0 / 1%) 0%, rgba(0, 0, 0, 0.36) 100%), url();
+  background-size: auto;
+  background-position: left top;
+  background-repeat: repeat;
+
+}
+
+.left-button,
+.right-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.right-buttons {
+  gap: 20px;
+  /* Odstęp między przyciskami */
+
+}
+
+.right-buttons a {
+  cursor: pointer;
+}
+
+.right-buttons a svg {
+  width: 45px;
+}
+
+.right-buttons a:hover svg,
+.right-buttons a:hover svg g {
+  fill: #b36947 !important;
+}
+
+.left-button a,
+#nextLevelButton {
+  display: block;
+  border: 3px solid white;
+  text-decoration: none;
+  padding: 10px 20px;
+  min-width: 150px;
+  text-align: center;
+  border-radius: 18px;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.left-button a:hover,
+#nextLevelButton:hover {
+  background-color: #b36947;
+  border-color: #b36947;
+  color: white;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-buttons {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+
+  .left-button {
+    margin-top: 10px;
+  }
+
+  .button {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+#cat {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#angyometer-container {
+  background: rgba(255, 255, 255, 0.75);
+  max-width: 480px;
+  margin: auto 10px;
+  box-sizing: border-box;
+  text-align: center;
+  position: fixed;
+  width: calc(100% - 10px);
+  bottom: 12px;
+  left: calc(50% - 10px);
+  transform: translate(-50%);
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 12px;
+
+}
+
+#angyometer-label {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+#angyometer-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#angyometer-fill {
+  width: 0%;
+  height: 100%;
+  background-color: #b36947;
+  border-radius: 10px 0 0 10px;
+}
+
+#message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2;
+  width: 80%;
+  max-width: 400px;
+}
+
+#nextLevelButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #423526;
+  border-color: #3b2e1f;
+  margin: 0 auto;
+  font-family: "Sour Gummy", sans-serif;
+
+}
+
+#level-details {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-83%, -63%) translateY(0) scale(0.9) rotateX(0deg) rotateZ(0deg);
+  }
+
+  25% {
+    transform: translate(-33%, -83%) translateY(-40px) scale(0.8) rotateX(5deg) rotateZ(5deg);
+  }
+
+  50% {
+    transform: translate(33%, -83%) translateY(-60px) scale(0.7) rotateX(-5deg) rotateZ(-7deg);
+  }
+
+  75% {
+    transform: translate(-53%, 33%) translateY(-40px) scale(1.1) rotateX(3deg) rotateZ(-9deg);
+  }
+
+  100% {
+    transform: translate(-83%, -63%) translateY(0) scale(0.9) rotateX(0deg) rotateZ(0deg);
+  }
+}
+
+
+@keyframes zombie-wobble {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-50%, -50%) rotate(5deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) rotate(-7deg);
+  }
+
+  75% {
+    transform: translate(-50%, -50%) rotate(2deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes zombie-eyes {
+  0% {
+    filter: drop-shadow(0 0 5px rgb(111, 0, 0));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 10px green);
+  }
+
+  100% {
+    filter: drop-shadow(0 0 5px red);
+  }
+}
+
+@keyframes zombie-shake {
+  0% {
+    transform: translate(-50%, -50%) translateX(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-50%, -50%) translateX(-2px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) translateX(2px) rotate(-1deg);
+  }
+
+  75% {
+    transform: translate(-50%, -50%) translateX(-1px) rotate(0.5deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes flying {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+
+  70% {
+    transform: translate(-50%, -50%) translateY(-60px);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
