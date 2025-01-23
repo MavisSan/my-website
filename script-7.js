@@ -135,7 +135,7 @@ const levels = [
             document.body.style.backgroundImage = `url('${this.backgroundImage}')`;
         },
         message: () => `
-            <p>Angy ran away, but you can still find her <a href="https://raydium.io/swap/?inputMint=sol&outputMint=FkMmszVPTT1pEu8tYhP7kcGrGug9WvEKHV53DMeqpump">here</a>.</p>
+            <p>Angy ran away, but you can still find her <a href="https://x.com/OfficialAngySol">here</a>.</p>
             <p>
                Your stats:<br />
                ${levelsStats.map((stat, idx) => `Level ${idx + 1}: ${stat.touches} touches`).join('<br />')}
